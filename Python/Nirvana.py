@@ -137,6 +137,3 @@ class Nirvana():
     def Decryption(self, mpk, ct1, M1, ct2, M2): 
         Coeff = SSS.recoverCoefficients([group.init(ZR, M1+1),group.init(ZR, M2+1)])
         return ct2['C'] / ((ct1['C1']**Coeff[M1+1])*(ct2['C1']**Coeff[M2+1]))
-
-L1=pair(mpk['g'],mpk['pp']) 
-L2=pair(mpk['g'],pk['pk'][N])
